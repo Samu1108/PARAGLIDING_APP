@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2023-12-31",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2023-12-31",
+    "description": "1 volo in solitaria!!!!",
+    "score": {
+      "takeoff": 8,
+      "landing": 8,
+      "manouver": 5,
+      "dinamic": null,
+      "termic": null
+    }
+  },
+  {
+    "date": "2025-06-15",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-15",
+    "description": "Volo di qualche giorno fa di cui non ricordo tanto (18/06)"
+  },
+  {
+    "date": "2025-06-18",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-18",
+    "description": "Volo bello con Gbari (doppio), dovevo frenare di più in decollo, dopo sono stato sopra Malga d'Andalo, Gaggia e Pradel-Montanara."
+  },
+  {
+    "date": "2025-06-19",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-19",
+    "description": "Volo d'esame a Feltre. Ottimi decollo, inversioni di rollio, orecchie, 360. Disastroso l'atterraggio (sono andato lungo), perché non ho fatto otto al momento giusto. Altrimenti dai, la teoria l'ho superata con un errore, 97/100.",
+    "score": {
+      "takeoff": 10,
+      "landing": 5,
+      "manouver": 8,
+      "dinamic": null,
+      "termic": null
+    }
+  },
+  {
+    "date": "2025-06-20",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-20",
+    "description": "Volo effettuato con Gabriele da Montanara, a Malga Andalo, siamo stati lì un po' ma non si capiva bene con la radio, siamo andati verso san Giovanni, volevo andare a Deft, ma ero basso e sono atterrato a Ischia.",
+    "score": {
+      "takeoff": 9,
+      "landing": 6,
+      "manouver": "-",
+      "dinamic": 7,
+      "termic": 7
+    }
+  },
+  {
+    "date": "2025-06-21",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-21",
+    "description": "q23",
+    "score": {
+      "takeoff": 5,
+      "landing": null,
+      "manouver": null,
+      "dinamic": null,
+      "termic": null
+    }
+  },
+  {
+    "date": "2025-06-24",
+    "pilotName": "Samuele Sartori",
+    "flightDate": "2025-06-24",
+    "description": "Secondo volo di giornata con Gabriele che non ha voluto usassi il cestello con gopro attaccata alla vela allora non ho filmato niente. Ho fatto cmq un volo abbastanza chill anche se sono atterrato molto bene, sono rimasto sul lago per un bel po', poi mi sono tirato in dentro.",
+    "score": {
+      "takeoff": 10,
+      "landing": 10,
+      "manouver": 6,
+      "dinamic": 7,
+      "termic": 5
+    }
+  }
+]

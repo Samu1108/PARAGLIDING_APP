@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flight Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main>
+    <h1>Flight Archive</h1>
+
+    <label for="flightSelect">Choose a date:</label>
+    <select id="flightSelect">
+      <option value="">-- Select --</option>
+    </select>
+
+    <div id="flightDetails" style="margin-top: 30px;"></div>
+
+    <a href="index.html">🔙 Back to Home</a>
+  </main>
+
+  <script type="module">
+    import { caricaDateVoli, caricaVoloDaData } from './firebase.js';
+
+    const flightSelect = document.getElementById('flightSelect');
+    const flightDetails = document.getElementById('flightDetails');
+
+    async function loadFlightDates() {
+      try {
+        const flights = await caricaDateVoli();
+        flights.forEach(f => {
+          const option = document.createElement('option');
+          option.value = f.flightDate;
+          option.textContent = `${f.flightDate} - ${f.pilotName}`;
+          flightSelect.appendChild(option);
+        });
+      } catch (err) {
+        console.error("Error loading flight dates:", err);
+      }
+    }
+
+    flightSelect.addEventListener('change', async () => {
+      const selectedDate = flightSelect.value;
+      if (!selectedDate) {
+        flightDetails.innerHTML = '';
+        return;
+      }
+
+      try {
+        const data = await caricaVoloDaData(selectedDate);
+        flightDetails.innerHTML = `
+          <p><strong>Pilot:</strong> ${data.pilotName}</p>
+          <p><strong>Date:</strong> ${data.flightDate}</p>
+          <p><strong>Description:</strong> ${data.description || '(none)'}</p>
+          <div class="score-list">
+            <p>Takeoff: ${data.score?.takeoff ?? '-'}</p>
+            <p>Landing: ${data.score?.landing ?? '-'}</p>
+            <p>Manouver: ${data.score?.manouver ?? '-'}</p>
+            <p>Dynamic: ${data.score?.dinamic ?? '-'}</p>
+            <p>Thermic: ${data.score?.termic ?? '-'}</p>
+          </div>
+        `;
+      } catch (err) {
+        flightDetails.innerHTML = '<p style="color:red;">Error loading flight.</p>';
+      }
+    });
+
+    loadFlightDates();
+  </script>
+</body>
+</html>
